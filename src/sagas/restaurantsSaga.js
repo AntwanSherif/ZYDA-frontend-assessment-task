@@ -1,4 +1,4 @@
-import { takeLatest, call, put, select } from 'redux-saga/effects';
+import { takeLatest, call, put } from 'redux-saga/effects';
 import { getRestaurantsAPI } from '../services/getRestaurants';
 import * as restaurantsActions from '../actions/restaurantsActions';
 

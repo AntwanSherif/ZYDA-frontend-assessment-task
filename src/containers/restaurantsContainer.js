@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
-import { Segment, Card } from 'semantic-ui-react'
+import { Segment, Card, Loader } from 'semantic-ui-react'
 
 import RestaurantCard from '../components/restaurantCard'
 import { fecthRestaurantsRequestAction } from '../actions/restaurantsActions'
@@ -27,10 +26,10 @@ export default class RestaurantsContainer extends Component {
         أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات.`;
         
         return (
-            <Segment loading={isFetching}>
+            <Segment style={{minHeight: window.innerHeight - 100}}>
                 {
                     isFetching
-                    ? <div>Loading...</div>
+                    ? <Loader active content='Loading...' />
                     : (
                         <Card.Group itemsPerRow={2} doubling>
                         {

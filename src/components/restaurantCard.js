@@ -5,7 +5,7 @@ import { Card, Image, Label } from 'semantic-ui-react'
 
 export default class RestaurantCard extends Component {
     render() {
-        let { language, imgSrc, logoSrc, name, time, rating, description } = this.props;
+        let { language, imgSrc, logoSrc, name, rating, description } = this.props;
 
 
         //rating representation
@@ -59,7 +59,6 @@ RestaurantCard.propTypes = {
     imgSrc:      PropTypes.string.isRequired, 
     logoSrc:     PropTypes.string.isRequired, 
     name:        PropTypes.string.isRequired, 
-    // time:        PropTypes.string.isRequired, 
     rating:      PropTypes.number.isRequired, 
-    description: PropTypes.string
+    description: PropTypes.string.isRequired
 };
